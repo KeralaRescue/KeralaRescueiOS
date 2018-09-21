@@ -48,3 +48,5 @@ All informations included are from the State Disaster Management Authority and a
 ![contacts_x_git](https://user-images.githubusercontent.com/10448770/45339566-1470a700-b548-11e8-9894-74a4a260a1a6.png)
 ![after_x_git](https://user-images.githubusercontent.com/10448770/45339565-1470a700-b548-11e8-9d0b-e15c0628be00.png)
 ![photos_x_git](https://user-images.githubusercontent.com/10448770/45339568-15093d80-b548-11e8-8bb1-98063678fc2c.png)
+
+testtest
