@@ -216,15 +216,20 @@ extension SafetyCheckSettingsViewController: CNContactPickerDelegate {
     func contactPicker(_ picker: CNContactPickerViewController, didSelect contacts: [CNContact]) {
         var tempContacts = [EmergencyContact]()
         for contact in contacts {
-            let contact = EmergencyContact.init(contact)
-            tempContacts.append(contact)
+            if self.contacts.filter({$0.isIdentiferEqual(contact.identifier)}).count == 0 {
+                let contact = EmergencyContact.init(contact)
+                tempContacts.append(contact)
+            }
         }
         
-        for contact in tempContacts {
+        for (index, contact) in tempContacts.enumerated() {
             contact.save()
+            self.contacts.append(contact)
+            let indexpath = IndexPath(row: index, section: 0)
+            contactsTableView.insertRows(at: [indexpath], with: .automatic)
         }
         
-        self.contacts = tempContacts
+        
         refreshContacts()
     }
 }

@@ -53,6 +53,10 @@ final class EmergencyContact: NSObject, Codable {
         return phoneNumbers
     }
     
+    func isIdentiferEqual(_ id: String) -> Bool {
+        return self.id == id
+    }
+    
     func save() {
         guard let identifier = id else {
             return
