@@ -18,7 +18,6 @@ final class EmergencySOSViewController: UIViewController, RANavigationProtocol {
     
     // MARK: Properties
     /// IBOUTLETS
-    @IBOutlet private var systemVolumeHolder: UIView!
     @IBOutlet private weak var tableView: UITableView!
     /// PRIVATE
     private var timer: Timer?
@@ -32,8 +31,11 @@ final class EmergencySOSViewController: UIViewController, RANavigationProtocol {
         [C.SAFETY_BUTTON_CONFIG.TITLE_KEY: "NEED HELP", C.SAFETY_BUTTON_CONFIG.COLOR_KEY: RAColorSet.WARNING_RED]]
     private struct C {
         static let TITLE = "Emergency/SOS"
-        static let CELL_WITH_SWITCH_ID = "SOSCellWithSwitch"
-        static let CELL_WITH_Button_ID = "SOSCellWithButton"
+        struct CELL_ID {
+            static let WITH_SWITCH = "SOSCellWithSwitch"
+            static let WITH_BUTTON = "SOSCellWithButton"
+            static let BLANK = "SOSCellBlank"
+        }
         struct SAFETY_BUTTON_CONFIG {
             static let TITLE_KEY = "title"
             static let COLOR_KEY = "color"
@@ -58,7 +60,6 @@ final class EmergencySOSViewController: UIViewController, RANavigationProtocol {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        initSystemVolumeHolder()
         locationManager.stopUpdatingLocation()
     }
     
@@ -151,13 +152,20 @@ private extension EmergencySOSViewController {
         audioPlayer.numberOfLoops = -1
     }
     
-    func initSystemVolumeHolder() {
-        let subview = systemVolumeHolder.viewWithTag(101)
-        subview?.removeFromSuperview()
-        systemVolumeHolder.backgroundColor = UIColor.clear
-        let mpVolumeView = MPVolumeView(frame: systemVolumeHolder.bounds)
+    func initSystemVolumeHolder(_ parent: UIView) {
+        
+        guard
+            let containerView = parent.viewWithTag(1),
+            containerView.viewWithTag(101) == nil
+        else {
+            return
+        }
+        print("adding subview")
+        containerView.backgroundColor = UIColor.clear
+        let mpVolumeView = MPVolumeView(frame: containerView.bounds)
+        mpVolumeView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
         mpVolumeView.tag = 101
-        systemVolumeHolder.addSubview(mpVolumeView)
+        containerView.addSubview(mpVolumeView)
     }
     
     func updateLocationStatus() {
@@ -208,7 +216,7 @@ extension EmergencySOSViewController: UITableViewDataSource, UITableViewDelegate
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         var rowCount = 0
         if section == 0 {
-            rowCount = toolsSections.count
+            rowCount = toolsSections.count + 1 /* SLIDER */
         } else if section == 1 {
             rowCount = safetySections.count
         }
@@ -219,11 +227,17 @@ extension EmergencySOSViewController: UITableViewDataSource, UITableViewDelegate
         var cell: UITableViewCell!
         switch indexPath.section {
         case 0:
-            cell = tableView.dequeueReusableCell(withIdentifier: C.CELL_WITH_SWITCH_ID)
-            let label = cell.viewWithTag(1) as! UILabel
-            label.text = toolsSections[indexPath.row]
+            if indexPath.row == toolsSections.count {
+                // SLIDER
+                cell = tableView.dequeueReusableCell(withIdentifier: C.CELL_ID.BLANK)
+                initSystemVolumeHolder(cell.contentView)
+            } else {
+                cell = tableView.dequeueReusableCell(withIdentifier: C.CELL_ID.WITH_SWITCH)
+                let label = cell.viewWithTag(1) as! UILabel
+                label.text = toolsSections[indexPath.row]
+            }
         case 1:
-            cell = tableView.dequeueReusableCell(withIdentifier: C.CELL_WITH_Button_ID)
+            cell = tableView.dequeueReusableCell(withIdentifier: C.CELL_ID.WITH_BUTTON)
             let label = cell.viewWithTag(1) as! UILabel
             let safetyConfig = safetySections[indexPath.row]
             label.text = safetyConfig[C.SAFETY_BUTTON_CONFIG.TITLE_KEY] as? String
@@ -252,6 +266,9 @@ extension EmergencySOSViewController: UITableViewDataSource, UITableViewDelegate
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch indexPath.section {
         case 0:
+            if indexPath.row == toolsSections.count {
+                return
+            }
             let cell = tableView.cellForRow(at: indexPath)
             let toggleSwitch = cell?.viewWithTag(2) as! UISwitch
             toggleSwitch.isOn = !toggleSwitch.isOn
@@ -285,6 +302,8 @@ extension EmergencySOSViewController: UITableViewDataSource, UITableViewDelegate
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         var height: CGFloat = 44.0
         if indexPath.section == 1 {
+            height = 64
+        } else if indexPath.section == 0 && indexPath.row == toolsSections.count {
             height = 64
         }
         return height
