@@ -3,12 +3,18 @@
 # Kerala Rescue iOS
 
 ## Overview
-Kerala Rescue is an iPhone app, which users will be able to prepare for a Flood, if in emergency they can contact respective operational centre. Users can also see Rescue Photos of 2018 Flood.
+Kerala Rescue is an iPhone app, which user can better prepare for a Flood. Preparation guides include how to face during situations before, during and after the flood.
+
+We have Emergency/SOS section so users can use make the iPhone flashlight as a strobe light, start an alarm in an emergency, send your coordinates as well as google map URL to your emergency recipients. 
+
+It also gives emergency contacts during a disaster such as District Collector Office, District Medical Officers, Superintendent of police etc. This way it will give easy access to normal people when in need.
+
+The Application includes some memorable moments of the 2018 Kerala Flood Rescue photos.
 
 ## Installation
 1. Open terminal and move to the desired folder to checkout. `cd ~/Desktop`
-2. Clone the repo. `git clone https://github.com/jayahariv/rescueApp.git`
-3. Move inside the folder. `cd rescueApp/RescueApp`
+2. Clone the repo. `git clone https://github.com/KeralaRescue/KeralaRescueiOS.git`
+3. Move inside the folder. `cd KeralaRescueiOS/RescueApp`
 4. Install pods. `pod install`
 5. Open the workspace. `RescueApp.xcworkspace`
 
@@ -25,22 +31,16 @@ This is a small patch to the existing app which were mostly some feedback integr
 Features of this version include
 - Prepare section content in malayalam 
 - Emeregency SOS Section with tools and safety checks
-
-## Future Plans
-- [ ] Prepare section extension
-    - [ ] Earthquake
-    - [ ] Landslide / ഉരുൾപൊട്ടൽ
-    - [ ] Flu Season
-    - [ ] Thunderstorm / ഇടിമിന്നൽ
-- [ ] Localize Icons
-
-## Data 
-All informations included are from the State Disaster Management Authority and afterflood.in. 
+    - Flashlight
+    - Strobe light
+    - Alarm
+    - Mark as safe
+    - Need Help
 
 ## Screenshots
-![home_x_git](https://user-images.githubusercontent.com/10448770/45339567-1470a700-b548-11e8-8d05-c8c1c23ebe2f.png)
-![prepare_x_git](https://user-images.githubusercontent.com/10448770/45339569-15093d80-b548-11e8-867f-3ca5a4fe78f2.png)
-![survival_x_git](https://user-images.githubusercontent.com/10448770/45339570-15093d80-b548-11e8-8291-3c09a24ae6ed.png)
-![contacts_x_git](https://user-images.githubusercontent.com/10448770/45339566-1470a700-b548-11e8-9894-74a4a260a1a6.png)
-![after_x_git](https://user-images.githubusercontent.com/10448770/45339565-1470a700-b548-11e8-9d0b-e15c0628be00.png)
-![photos_x_git](https://user-images.githubusercontent.com/10448770/45339568-15093d80-b548-11e8-8bb1-98063678fc2c.png)
+![home](https://user-images.githubusercontent.com/10448770/45957755-9b069900-bfca-11e8-907a-4eb9a962be6a.png)
+![sos](https://user-images.githubusercontent.com/10448770/45957757-9b069900-bfca-11e8-91cc-bf5f8482843d.png)
+![prepare](https://user-images.githubusercontent.com/10448770/45957758-9b069900-bfca-11e8-9dbd-02315e52b6f1.png)
+![after](https://user-images.githubusercontent.com/10448770/45957759-9b069900-bfca-11e8-98bc-3652591da2d5.png)
+![contacts](https://user-images.githubusercontent.com/10448770/45957761-9b9f2f80-bfca-11e8-896a-c7d54771295d.png)
+![photos](https://user-images.githubusercontent.com/10448770/45957762-9b9f2f80-bfca-11e8-8a49-19a2d7598e21.png)
