@@ -38,9 +38,9 @@ Features of this version include
     - Need Help
 
 ## Screenshots
-![home](https://user-images.githubusercontent.com/10448770/45957755-9b069900-bfca-11e8-907a-4eb9a962be6a.png)
-![sos](https://user-images.githubusercontent.com/10448770/45957757-9b069900-bfca-11e8-91cc-bf5f8482843d.png)
-![prepare](https://user-images.githubusercontent.com/10448770/45957758-9b069900-bfca-11e8-9dbd-02315e52b6f1.png)
-![after](https://user-images.githubusercontent.com/10448770/45957759-9b069900-bfca-11e8-98bc-3652591da2d5.png)
-![contacts](https://user-images.githubusercontent.com/10448770/45957761-9b9f2f80-bfca-11e8-896a-c7d54771295d.png)
-![photos](https://user-images.githubusercontent.com/10448770/45957762-9b9f2f80-bfca-11e8-8a49-19a2d7598e21.png)
+![home](https://user-images.githubusercontent.com/10448770/45957863-e5881580-bfca-11e8-97ef-a76a779ae089.png)
+![sos](https://user-images.githubusercontent.com/10448770/45957862-e5881580-bfca-11e8-957b-39674b726376.png)
+![prepare](https://user-images.githubusercontent.com/10448770/45957861-e5881580-bfca-11e8-9d87-780b8a43ee49.png)
+![after](https://user-images.githubusercontent.com/10448770/45957860-e5881580-bfca-11e8-8128-fa989e9f44a4.png)
+![contacts](https://user-images.githubusercontent.com/10448770/45957859-e5881580-bfca-11e8-871a-0c6e1635d927.png)
+![photos](https://user-images.githubusercontent.com/10448770/45957858-e4ef7f00-bfca-11e8-91c9-d697835ed41e.png)
