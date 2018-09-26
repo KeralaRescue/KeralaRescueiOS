@@ -23,8 +23,6 @@ During the Version 1.1, almost all the resuce and necessary food requirements ar
 
 In this version we will help people to read about how to prepare for a disaster, emergency contacts in case of emergency, photos of 2018 Kerala Rescue. Photo upload capability is not present, but users can send a comment to the existing photo.
 
-Appstore URL [here](https://itunes.apple.com/us/app/kerala-rescue/id1432467893). 
-
 ## Version 1.2
 This is a small patch to the existing app which were mostly some feedback integration from the beta testing done during 1.1.
 
@@ -36,6 +34,9 @@ Features of this version include
     - Alarm
     - Mark as safe
     - Need Help
+
+## Appstore URL 
+[URL](https://itunes.apple.com/us/app/kerala-rescue/id1432467893)
 
 ## Screenshots
 ![home](https://user-images.githubusercontent.com/10448770/45957863-e5881580-bfca-11e8-97ef-a76a779ae089.png)
