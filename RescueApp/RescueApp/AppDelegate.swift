@@ -17,15 +17,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var filterModel:FilterModel?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
-        if !UserDefaults.standard.bool(forKey: Constants.UserDefaultsKeys.FIRST_TIME_LOGIN) {
-            // First time logging in - save the Aug 23th, 2018 time stamp hardcoded
-            UserDefaults.standard.set(Constants.AUG_23_2018_TIMESTAMP,
-                                      forKey: Constants.UserDefaultsKeys.REQUESTS_LAST_UPDATED_TIME)
-            UserDefaults.standard.synchronize()
-        }
         FirebaseApp.configure()
         FirebaseAPIConfigure.shared.configure()
+        
+        saveDefaultEmergencyMessages()
         return true
+    }
+    
+    private func saveDefaultEmergencyMessages() {
+        UserDefaults.standard.set(Constants.DANGER_NEED_HELP_MESSAGE,
+                                  forKey: Constants.UserDefaultsKeys.DANGER_NEED_HELP_MESSAGE)
+        UserDefaults.standard.set(Constants.MARK_AS_SAFE_MESSAGE,
+                                  forKey: Constants.UserDefaultsKeys.MARK_AS_SAFE_MESSAGE)
     }
 }
 
