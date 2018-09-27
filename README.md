@@ -15,7 +15,7 @@ The Application includes some memorable moments of the 2018 Kerala Flood Rescue 
 1. Open terminal and move to the desired folder to checkout. `cd ~/Desktop`
 2. Clone the repo. `git clone https://github.com/KeralaRescue/KeralaRescueiOS.git`
 3. Move inside the folder. `cd KeralaRescueiOS/RescueApp`
-4. Install pods. `pod install`
+4. Install pods. `pod update`
 5. Open the workspace. `RescueApp.xcworkspace`
 
 ## Version 1.1
