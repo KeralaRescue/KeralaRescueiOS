@@ -257,7 +257,7 @@ extension EmergencySOSViewController: UITableViewDataSource, UITableViewDelegate
         } else if section == 1 {
             title = "Safety Actions"
             if contacts.count == 0 {
-                title = "\(title!) (INACTIVE)"
+                title = "\(title!) (Currently inactive. Please click the settings button and add Recipients)"
             }
         }
         return title
