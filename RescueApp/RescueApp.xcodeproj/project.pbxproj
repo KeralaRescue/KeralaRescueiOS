@@ -48,6 +48,10 @@
 		491FAFB2213021FA003160CF /* Survey.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 491FAFB1213021FA003160CF /* Survey.storyboard */; };
 		75DA37292127EF6E00A9D00A /* ListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75DA37282127EF6E00A9D00A /* ListViewCell.swift */; };
 		7898CE99026828F6834E292A /* Pods_RescueAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5116ACA8CBD9D7C89D402F0 /* Pods_RescueAppTests.framework */; };
+		A7628F4D216722A800475AC1 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7628F4C216722A800475AC1 /* Language.swift */; };
+		A7628F4F2167236600475AC1 /* UserPreference.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7628F4E2167236600475AC1 /* UserPreference.swift */; };
+		A7628F522167286100475AC1 /* UserDefaultable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7628F512167286100475AC1 /* UserDefaultable.swift */; };
+		A7628F5421672CCD00475AC1 /* UserPreferenceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7628F5321672CCD00475AC1 /* UserPreferenceTest.swift */; };
 		BD678C89C2E2EDB2524927C2 /* Pods_RescueAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F32AC322BDA95193DEEF607 /* Pods_RescueAppUITests.framework */; };
 		DAA81A44212E5CC900AA0ECA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DAA81A43212E5CC800AA0ECA /* GoogleService-Info.plist */; };
 		DAA81A47212E740E00AA0ECA /* GuidelineContentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA81A46212E740E00AA0ECA /* GuidelineContentController.swift */; };
@@ -150,6 +154,10 @@
 		7F0350EC64490B12D85ED635 /* Pods-RescueAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RescueAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RescueAppTests/Pods-RescueAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		A59EEFF9F5B713B364EE93C6 /* Pods-RescueApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RescueApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RescueApp/Pods-RescueApp.debug.xcconfig"; sourceTree = "<group>"; };
 		A5E416EC82330986E089BA2C /* Pods-RescueAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RescueAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RescueAppTests/Pods-RescueAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		A7628F4C216722A800475AC1 /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
+		A7628F4E2167236600475AC1 /* UserPreference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPreference.swift; sourceTree = "<group>"; };
+		A7628F512167286100475AC1 /* UserDefaultable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultable.swift; sourceTree = "<group>"; };
+		A7628F5321672CCD00475AC1 /* UserPreferenceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPreferenceTest.swift; sourceTree = "<group>"; };
 		B2A1D660814759FDB289EA02 /* Pods-RescueApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RescueApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-RescueApp/Pods-RescueApp.release.xcconfig"; sourceTree = "<group>"; };
 		DAA81A43212E5CC800AA0ECA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DAA81A46212E740E00AA0ECA /* GuidelineContentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuidelineContentController.swift; sourceTree = "<group>"; };
@@ -342,6 +350,23 @@
 			path = Survey;
 			sourceTree = "<group>";
 		};
+		A7628F4B2167227E00475AC1 /* Language */ = {
+			isa = PBXGroup;
+			children = (
+				A7628F4C216722A800475AC1 /* Language.swift */,
+				A7628F4E2167236600475AC1 /* UserPreference.swift */,
+			);
+			path = Language;
+			sourceTree = "<group>";
+		};
+		A7628F502167253A00475AC1 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				A7628F512167286100475AC1 /* UserDefaultable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		CF80C57E1A4D85E98007ACEE /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -391,6 +416,7 @@
 		E9DBF9682127806700CFD933 /* RescueApp */ = {
 			isa = PBXGroup;
 			children = (
+				A7628F502167253A00475AC1 /* Protocols */,
 				0829E1C7213C95A5002CEE21 /* OfflineData */,
 				28386F5C212818B10012F429 /* Search */,
 				082230492127E6F400B7FBF2 /* View */,
@@ -413,6 +439,7 @@
 			isa = PBXGroup;
 			children = (
 				E9DBF97E2127806A00CFD933 /* RescueAppTests.swift */,
+				A7628F5321672CCD00475AC1 /* UserPreferenceTest.swift */,
 				E9DBF9802127806A00CFD933 /* Info.plist */,
 			);
 			path = RescueAppTests;
@@ -430,6 +457,7 @@
 		E9DBF99B2127844100CFD933 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A7628F4B2167227E00475AC1 /* Language */,
 				08165451214EE81A0030F601 /* SOS */,
 				0829E1C0213C7283002CEE21 /* HowToPrepare */,
 				E9F925FB213B305400CD9437 /* Contacts */,
@@ -657,7 +685,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-RescueAppTests/Pods-RescueAppTests-frameworks.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-RescueAppTests/Pods-RescueAppTests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Cartography/Cartography.framework",
 				"${PODS_ROOT}/CouchbaseLite-Swift-Enterprise/iOS/CouchbaseLiteSwift.framework",
 				"${PODS_ROOT}/CouchbaseLite-Swift-Enterprise/iOS/CouchbaseLiteSwift.framework.dSYM",
@@ -682,7 +710,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RescueAppTests/Pods-RescueAppTests-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RescueAppTests/Pods-RescueAppTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		3F063942D5864832A6622671 /* [CP] Check Pods Manifest.lock */ = {
@@ -745,7 +773,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-RescueApp/Pods-RescueApp-frameworks.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-RescueApp/Pods-RescueApp-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Cartography/Cartography.framework",
 				"${PODS_ROOT}/CouchbaseLite-Swift-Enterprise/iOS/CouchbaseLiteSwift.framework",
 				"${PODS_ROOT}/CouchbaseLite-Swift-Enterprise/iOS/CouchbaseLiteSwift.framework.dSYM",
@@ -770,7 +798,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RescueApp/Pods-RescueApp-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RescueApp/Pods-RescueApp-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -780,9 +808,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7628F522167286100475AC1 /* UserDefaultable.swift in Sources */,
 				0829E1C6213C88F6002CEE21 /* SurvivalSkillsViewController.swift in Sources */,
 				08F59A092130E67A00785841 /* Contact.swift in Sources */,
 				08165455214F33360030F601 /* EmergencyContactUtil.swift in Sources */,
+				A7628F4D216722A800475AC1 /* Language.swift in Sources */,
 				E9DBF9A22127872A00CFD933 /* ApiClient.swift in Sources */,
 				08F599FA212E9BCB00785841 /* ContactsViewController.swift in Sources */,
 				DABD53EA2130B8AA00B287F1 /* WebController.swift in Sources */,
@@ -806,6 +836,7 @@
 				491FAFB021302016003160CF /* SurveyListViewController.swift in Sources */,
 				08F59A0B213A46F700785841 /* PhotoComment.swift in Sources */,
 				08223610212CFD3800D2808D /* Constants.swift in Sources */,
+				A7628F4F2167236600475AC1 /* UserPreference.swift in Sources */,
 				0816544D214D61FF0030F601 /* SafetyCheckSettingsViewController.swift in Sources */,
 				08164DFD2149C0920030F601 /* EmergencySOSViewController.swift in Sources */,
 				08F59A01212FB61D00785841 /* Photo.swift in Sources */,
@@ -829,6 +860,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9DBF97F2127806A00CFD933 /* RescueAppTests.swift in Sources */,
+				A7628F5421672CCD00475AC1 /* UserPreferenceTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1019,7 +1051,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = X6N62J5SQP;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/RescueApp",
@@ -1046,7 +1078,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = X6N62J5SQP;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/RescueApp",
