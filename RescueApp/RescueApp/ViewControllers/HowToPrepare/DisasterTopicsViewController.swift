@@ -37,10 +37,7 @@ final class DisasterTopicsViewController: UIViewController, RANavigationProtocol
         static let PLIST_PREPARE_GUIDE_KEY = "prepare"
         static let TOPICS_HEADING = "TAKE ACTION"
     }
-    private var language: Language = { () -> Language in
-        let language_code: Int = UserDefaults.standard.integer(forKey: Constants.UserDefaultsKeys.PREFERRED_LANGUAGE)
-        return language_code == 0 ? Language.english : Language.malayalam
-    }()
+    private let languagePreference = UserPreference<Language>()
 
     // MARK: View lifecycle
     
@@ -48,7 +45,7 @@ final class DisasterTopicsViewController: UIViewController, RANavigationProtocol
         super.viewDidLoad()
         configureUIFromViewDidLoad()
         if ApiClient.isConnected {
-            fetchPrepareGuideFromFirebase(.english)
+            fetchPrepareGuideFromFirebase(languagePreference.preference)
         } else {
             fetchPrepareGuideFromPLIST()
         }
@@ -139,6 +136,7 @@ private extension DisasterTopicsViewController {
     }
     
     func changeLanguage(_ language: Language) {
+        languagePreference.preference = language
         fetchPrepareGuideFromFirebase(language)
     }
 }
