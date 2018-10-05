@@ -36,6 +36,12 @@ final class HomeViewController: UIViewController {
         static let BOTTOM_QUOTES = "HOME_BOTTOM_QUOTES_KERALA_RESCUE"
         static let alertTitle = "FirstAlert"
         static let LoadingDataFromServer = "LoadingDataFromServer"
+        // Button Labels
+        static let emergencySOSTextKey = "EmergencySOS"
+        static let prepareTextKey = "Prepare"
+        static let afterAFloodTextKey = "AfterAFlood"
+        static let emergencyContactsTextKey = "EmergencyContacts"
+        static let rescuePhotosTextKey = "RescuePhotos18"
         struct HomeCellKeys {
             static let title = "title"
             static let color = "color"
@@ -43,11 +49,11 @@ final class HomeViewController: UIViewController {
     }
     private var homeCells: [[String: AnyObject]] {
         return [
-            [C.HomeCellKeys.title: "Emergency / SOS", C.HomeCellKeys.color: RAColorSet.RED],
-            [C.HomeCellKeys.title: "Prepare", C.HomeCellKeys.color: RAColorSet.GREEN],
-            [C.HomeCellKeys.title: "After A Flood", C.HomeCellKeys.color: RAColorSet.LIGHT_BLUE],
-            [C.HomeCellKeys.title: "Emergency Contacts", C.HomeCellKeys.color: RAColorSet.PURPLE],
-            [C.HomeCellKeys.title: "Rescue Photos '18", C.HomeCellKeys.color: RAColorSet.YELLOW]
+            [C.HomeCellKeys.title: NSLocalizedString(C.emergencySOSTextKey, comment: "localized"), C.HomeCellKeys.color: RAColorSet.RED],
+            [C.HomeCellKeys.title: NSLocalizedString(C.prepareTextKey, comment: "localized"), C.HomeCellKeys.color: RAColorSet.GREEN],
+            [C.HomeCellKeys.title: NSLocalizedString(C.afterAFloodTextKey, comment: "localized"), C.HomeCellKeys.color: RAColorSet.LIGHT_BLUE],
+            [C.HomeCellKeys.title: NSLocalizedString(C.emergencyContactsTextKey, comment: "localized"), C.HomeCellKeys.color: RAColorSet.PURPLE],
+            [C.HomeCellKeys.title: NSLocalizedString(C.rescuePhotosTextKey, comment: "localized"), C.HomeCellKeys.color: RAColorSet.YELLOW]
         ] as [[String: AnyObject]]
     }
     
@@ -82,10 +88,10 @@ extension HomeViewController {
         navigationItem.backBarButtonItem = UIBarButtonItem()
         
         // set texts
-        headingLabel.text = NSLocalizedString(C.TOP_QUOTES, comment: "localised")
-        subHeadingLabel.text = NSLocalizedString(C.BOTTOM_QUOTES, comment: "localised")
+        headingLabel.text = NSLocalizedString(C.TOP_QUOTES, comment: "localized")
+        subHeadingLabel.text = NSLocalizedString(C.BOTTOM_QUOTES, comment: "localized")
         
-        titleLabel.text = NSLocalizedString("AppTitle", comment: "localised")
+        titleLabel.text = NSLocalizedString("AppTitle", comment: "localized")
     }
 
     func updateUI() {
