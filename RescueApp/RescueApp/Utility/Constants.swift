@@ -17,10 +17,17 @@ struct Constants {
         static let DANGER_NEED_HELP_MESSAGE = "need_help_in_danger_message"
         static let MARK_AS_SAFE_MESSAGE = "mark_as_safe_message"
         static let CAN_LOCATION_SHARED = "can_location_shared"
+        static let PREFERRED_LANGUAGE = "preferred_language"
     }
     
     static let AUG_23_2018_TIMESTAMP: TimeInterval = 1534982400
     static let DAY_IN_SECONDS = TimeInterval(24 * 60 * 60)
     static let DANGER_NEED_HELP_MESSAGE = "Please help me, I am in danger"
     static let MARK_AS_SAFE_MESSAGE = "I am safe here."
+}
+
+// Supported Languages
+enum Language: Int {
+    case english = 0
+    case malayalam
 }

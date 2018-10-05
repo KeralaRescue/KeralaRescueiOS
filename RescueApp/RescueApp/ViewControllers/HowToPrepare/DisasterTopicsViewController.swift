@@ -37,13 +37,10 @@ final class DisasterTopicsViewController: UIViewController, RANavigationProtocol
         static let PLIST_PREPARE_GUIDE_KEY = "prepare"
         static let TOPICS_HEADING = "TAKE ACTION"
     }
-    private var language: Language = .english
-    
-    // SUPPORTED LANGUAGES
-    enum Language {
-        case english
-        case malayalam
-    }
+    private var language: Language = { () -> Language in
+        let language_code: Int = UserDefaults.standard.integer(forKey: Constants.UserDefaultsKeys.PREFERRED_LANGUAGE)
+        return language_code == 0 ? Language.english : Language.malayalam
+    }()
 
     // MARK: View lifecycle
     
@@ -69,9 +66,11 @@ final class DisasterTopicsViewController: UIViewController, RANavigationProtocol
         let alert = UIAlertController(title: "Select language", message: nil, preferredStyle: .actionSheet)
         alert.addAction(UIAlertAction(title: "English", style: .default, handler: { [weak self] (_) in
             self?.changeLanguage(.english)
+            UserDefaults.standard.set(Language.english.rawValue, forKey: Constants.UserDefaultsKeys.PREFERRED_LANGUAGE)
         }))
         alert.addAction(UIAlertAction(title: "Malayalam", style: .default, handler: { [weak self] (_) in
             self?.changeLanguage(.malayalam)
+            UserDefaults.standard.set(Language.malayalam.rawValue, forKey: Constants.UserDefaultsKeys.PREFERRED_LANGUAGE)
         }))
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         present(alert, animated: true, completion: nil)
