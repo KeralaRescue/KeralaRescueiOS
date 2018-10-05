@@ -38,7 +38,6 @@ final class DisasterTopicsViewController: UIViewController, RANavigationProtocol
         static let TOPICS_HEADING = "TAKE ACTION"
     }
     private let languagePreference = UserPreference<Language>()
-    
 
     // MARK: View lifecycle
     
@@ -64,9 +63,11 @@ final class DisasterTopicsViewController: UIViewController, RANavigationProtocol
         let alert = UIAlertController(title: "Select language", message: nil, preferredStyle: .actionSheet)
         alert.addAction(UIAlertAction(title: "English", style: .default, handler: { [weak self] (_) in
             self?.changeLanguage(.english)
+            UserDefaults.standard.set(Language.english.rawValue, forKey: Constants.UserDefaultsKeys.PREFERRED_LANGUAGE)
         }))
         alert.addAction(UIAlertAction(title: "Malayalam", style: .default, handler: { [weak self] (_) in
             self?.changeLanguage(.malayalam)
+            UserDefaults.standard.set(Language.malayalam.rawValue, forKey: Constants.UserDefaultsKeys.PREFERRED_LANGUAGE)
         }))
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         present(alert, animated: true, completion: nil)
