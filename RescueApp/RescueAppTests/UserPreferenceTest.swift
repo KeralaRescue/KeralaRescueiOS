@@ -21,7 +21,7 @@ class UserPreferenceTest: XCTestCase {
 
     func testLanguage() {
         let userPreference = UserPreference<Language>(userDefaults: self.userDefaults)
-        XCTAssertEqual(userPreference.preference, Language.english) // .english is default
+        XCTAssertEqual(userPreference.preference, Language.userDefaultsValue)
         userPreference.preference = .malayalam
         XCTAssertEqual(userPreference.preference, Language.malayalam)
         userPreference.preference = .english
