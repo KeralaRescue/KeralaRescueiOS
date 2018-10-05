@@ -21,8 +21,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FirebaseAPIConfigure.shared.configure()
         
         saveDefaultEmergencyMessages()
-        // The default language of the app is English
-        UserDefaults.standard.set(Language.english.rawValue, forKey: Constants.UserDefaultsKeys.PREFERRED_LANGUAGE)
         return true
     }
     
