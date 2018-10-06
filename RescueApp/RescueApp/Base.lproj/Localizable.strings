@@ -33,3 +33,10 @@
 "AfterAFlood" = "After A Flood";
 "EmergencyContacts" = "Emergency Contacts";
 "RescuePhotos18" = "Rescue Photos '18";
+"EmergencySettings" = "Emergency Settings";
+"MarkAsSafeMessage" = "MARK AS SAFE MESSAGE";
+"NeedHelpMessage" = "NEED HELP MESSAGE";
+"ShareCurrentLocation" = "Share Current Location";
+"AddEmergencyContacts" = "Add Emergency Contacts";
+"NoContactsAdded" = "No Contacts added. Please take time to add emergency contacts. ";
+"Contacts" = "Contacts";
