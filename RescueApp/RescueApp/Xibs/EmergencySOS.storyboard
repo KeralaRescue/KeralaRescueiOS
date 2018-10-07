@@ -264,8 +264,11 @@
                         <outlet property="canShareLocationSwitch" destination="7Ft-QG-pct" id="WFo-p9-5BS"/>
                         <outlet property="contactsTableView" destination="dtp-gq-0UZ" id="DAv-Cf-Zbt"/>
                         <outlet property="helpNeededTextView" destination="ZCQ-hI-6bJ" id="F4M-hr-gi2"/>
+                        <outlet property="markAsSafeLabel" destination="Zrv-SA-EXo" id="18B-pB-yiV"/>
                         <outlet property="markAsSafeTextView" destination="dlD-US-Pl1" id="BZv-an-166"/>
+                        <outlet property="needHelpLabel" destination="M3B-8t-Byg" id="Cez-C9-7E6"/>
                         <outlet property="noContactsWarningLabel" destination="Afc-IU-Q5d" id="HkI-Zd-ZIt"/>
+                        <outlet property="shareLocationLabel" destination="JJj-9J-dED" id="nwO-G2-CAu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qAE-wA-SDi" userLabel="First Responder" sceneMemberID="firstResponder"/>

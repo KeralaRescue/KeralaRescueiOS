@@ -33,4 +33,10 @@
 "AfterAFlood" = "";
 "EmergencyContacts" = "";
 "RescuePhotos18" = "";
-
+"EmergencySettings" = "";
+"MarkAsSafeMessage" = "";
+"NeedHelpMessage" = "";
+"ShareCurrentLocation" = "";
+"AddEmergencyContacts" = "";
+"NoContactsAdded" = "";
+"Contacts" = "Contacts";

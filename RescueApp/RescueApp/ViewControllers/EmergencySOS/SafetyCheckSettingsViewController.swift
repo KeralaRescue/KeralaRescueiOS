@@ -27,12 +27,23 @@ final class SafetyCheckSettingsViewController: UIViewController {
     @IBOutlet private weak var contactsTableView: UITableView!
     @IBOutlet private weak var noContactsWarningLabel: UILabel!
     @IBOutlet private weak var addRecipientsButton: UIButton!
+    @IBOutlet weak var markAsSafeLabel: UILabel!
+    @IBOutlet weak var needHelpLabel: UILabel!
+    @IBOutlet weak var shareLocationLabel: UILabel!
     /// iVARs
     private var contacts = [EmergencyContact]()
     private let locationManager = CLLocationManager()
     private struct C {
         static let CELL_ID = "safetyCheckCellID"
-        static let TITLE = "Emergency Settings"
+        
+        // localization keys
+        static let titleTextKey = "EmergencySettings"
+        static let markAsSafeTextKey = "MarkAsSafeMessage"
+        static let needHelpTextKey = "NeedHelpMessage"
+        static let shareCurrentLocationTextKey = "ShareCurrentLocation"
+        static let addEmergencyContactsTextKey = "AddEmergencyContacts"
+        static let noContactsAddedTextKey = "NoContactsAdded"
+        static let contactsTitleTextKey = "Contacts"
     }
     
     // MARK: View Lifecycle
@@ -80,7 +91,12 @@ final class SafetyCheckSettingsViewController: UIViewController {
 
 private extension SafetyCheckSettingsViewController {
     func configureUIFromViewDidLoad() {
-        title = C.TITLE
+        title = NSLocalizedString(C.titleTextKey, comment: "localized")
+        markAsSafeLabel.text = NSLocalizedString(C.markAsSafeTextKey, comment: "localized")
+        needHelpLabel.text = NSLocalizedString(C.needHelpTextKey, comment: "localized")
+        shareLocationLabel.text = NSLocalizedString(C.shareCurrentLocationTextKey, comment: "localized")
+        noContactsWarningLabel.text = NSLocalizedString(C.noContactsAddedTextKey, comment: "localized")
+        addRecipientsButton.setTitle(NSLocalizedString(C.addEmergencyContactsTextKey, comment: "localized"), for: .normal)
         
         helpNeededTextView.text =
             fetchCustomMessage(Constants.UserDefaultsKeys.DANGER_NEED_HELP_MESSAGE) ?? Constants.DANGER_NEED_HELP_MESSAGE
@@ -176,7 +192,7 @@ extension SafetyCheckSettingsViewController: UITableViewDataSource, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Contacts"
+        return NSLocalizedString(C.contactsTitleTextKey, comment: "localized")
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

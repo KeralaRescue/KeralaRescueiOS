@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		08164DF82145A81B0030F601 /* ImageName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08164DF72145A81B0030F601 /* ImageName.swift */; };
-		08164DFA2149C0550030F601 /* EmergencySOS.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08164DF92149C0550030F601 /* EmergencySOS.storyboard */; };
 		08164DFD2149C0920030F601 /* EmergencySOSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08164DFC2149C0920030F601 /* EmergencySOSViewController.swift */; };
 		08165017214A9B9A0030F601 /* alarm.wav in Resources */ = {isa = PBXBuildFile; fileRef = 08165016214A9B990030F601 /* alarm.wav */; };
 		0816544D214D61FF0030F601 /* SafetyCheckSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0816544C214D61FF0030F601 /* SafetyCheckSettingsViewController.swift */; };
@@ -40,6 +39,7 @@
 		08F59A092130E67A00785841 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F59A082130E67A00785841 /* Contact.swift */; };
 		08F59A0B213A46F700785841 /* PhotoComment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F59A0A213A46F700785841 /* PhotoComment.swift */; };
 		08FDDE5F2129F9D0006B84BE /* RequestsDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FDDE5E2129F9D0006B84BE /* RequestsDictionary.swift */; };
+		141CF50221695B4A00BBD0D6 /* EmergencySOS.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 141CF50121695B4A00BBD0D6 /* EmergencySOS.storyboard */; };
 		28386F612128191E0012F429 /* TagCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28386F5D2128191E0012F429 /* TagCollectionViewCell.xib */; };
 		28386F622128191E0012F429 /* TagCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28386F5E2128191E0012F429 /* TagCollectionViewCell.swift */; };
 		28386F632128191E0012F429 /* RescueSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28386F5F2128191E0012F429 /* RescueSearchView.swift */; };
@@ -106,7 +106,6 @@
 
 /* Begin PBXFileReference section */
 		08164DF72145A81B0030F601 /* ImageName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageName.swift; sourceTree = "<group>"; };
-		08164DF92149C0550030F601 /* EmergencySOS.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EmergencySOS.storyboard; sourceTree = "<group>"; };
 		08164DFC2149C0920030F601 /* EmergencySOSViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencySOSViewController.swift; sourceTree = "<group>"; };
 		08165016214A9B990030F601 /* alarm.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = alarm.wav; sourceTree = "<group>"; };
 		0816544C214D61FF0030F601 /* SafetyCheckSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafetyCheckSettingsViewController.swift; sourceTree = "<group>"; };
@@ -142,6 +141,7 @@
 		08F59A0A213A46F700785841 /* PhotoComment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoComment.swift; sourceTree = "<group>"; };
 		08FDDE5E2129F9D0006B84BE /* RequestsDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestsDictionary.swift; sourceTree = "<group>"; };
 		0C95AB2BC92A00D878E0C564 /* Pods-RescueAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RescueAppUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RescueAppUITests/Pods-RescueAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		141CF50121695B4A00BBD0D6 /* EmergencySOS.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = EmergencySOS.storyboard; sourceTree = "<group>"; };
 		28386F5D2128191E0012F429 /* TagCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TagCollectionViewCell.xib; sourceTree = "<group>"; };
 		28386F5E2128191E0012F429 /* TagCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagCollectionViewCell.swift; sourceTree = "<group>"; };
 		28386F5F2128191E0012F429 /* RescueSearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RescueSearchView.swift; sourceTree = "<group>"; };
@@ -286,13 +286,13 @@
 		08223607212A807800D2808D /* Xibs */ = {
 			isa = PBXGroup;
 			children = (
+				141CF50121695B4A00BBD0D6 /* EmergencySOS.storyboard */,
 				E9DBF96D2127806700CFD933 /* Main.storyboard */,
 				E9F925F3213B2DC000CD9437 /* HowToPrepare.storyboard */,
 				E9DBF9722127806A00CFD933 /* LaunchScreen.storyboard */,
 				08F599F6212E9B7D00785841 /* Contacts.storyboard */,
 				08F599FE212FB44F00785841 /* PhotoGallery.storyboard */,
 				491FAFB1213021FA003160CF /* Survey.storyboard */,
-				08164DF92149C0550030F601 /* EmergencySOS.storyboard */,
 			);
 			path = Xibs;
 			sourceTree = "<group>";
@@ -644,7 +644,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				08164DFA2149C0550030F601 /* EmergencySOS.storyboard in Resources */,
 				08F599FF212FB44F00785841 /* PhotoGallery.storyboard in Resources */,
 				E9F925F4213B2DC000CD9437 /* HowToPrepare.storyboard in Resources */,
 				0864D51E212A45EC00DE403D /* OfflineData.plist in Resources */,
@@ -657,6 +656,7 @@
 				0864D523212A53AE00DE403D /* Localizable.strings in Resources */,
 				DABD53E82130B09900B287F1 /* Guidelines.json in Resources */,
 				28386F612128191E0012F429 /* TagCollectionViewCell.xib in Resources */,
+				141CF50221695B4A00BBD0D6 /* EmergencySOS.storyboard in Resources */,
 				082235FE212A604E00D2808D /* InfoPlist.strings in Resources */,
 				E9DBF96F2127806700CFD933 /* Main.storyboard in Resources */,
 			);
